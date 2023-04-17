@@ -5,7 +5,7 @@ const { NotImplementedError } = require('../extensions/index.js');
  * to solve puzzle
  * 
  * @param {Number} disks number of disks
- * @param {Number} turnsSpeed speed (in turns/hour)
+ * @param {Number} t_speed speed (in turns/hour)
  * @return {Object} object with props turns (number of turns)
  * and seconds (time in seconds)
  *
@@ -14,14 +14,14 @@ const { NotImplementedError } = require('../extensions/index.js');
  * calculateHanoi(9, 4308) => { turns: 511, seconds: 427 }
  *
  */
-function calculateHanoi( disksNumber, turnsSpeed ) {
+function calculateHanoi( d_number, t_speed ) {
+
+let seconds, turns =1;
 let result = {}
-let turns =1;
-	for (let i = 1; i< disksNumber;i++) {
+	for (let i = 1; i< d_number;i++) {
 	turns=1+ 2*turns
 }
-let seconds
-seconds = Math.floor(turns*3600/turnsSpeed)
+seconds = Math.floor(turns*3600/t_speed)
 result = {
 	turns: turns,
 	seconds: seconds
